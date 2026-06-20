@@ -1,0 +1,10 @@
+# Dữ liệu và Mô hình
+dataset/
+models/*.pkl
+*.csv
+
+# File hệ thống của Python
+__pycache__/
+*.pyc
+
+.env

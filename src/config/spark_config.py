@@ -1,0 +1,36 @@
+from pyspark.sql.types import StructType, StructField, DoubleType, IntegerType
+
+# Khai báo trực tiếp 31 cột theo đúng thứ tự file CSV
+TRANSACTION_SCHEMA = StructType([
+    StructField("Time", DoubleType(), True),
+    StructField("V1", DoubleType(), True),
+    StructField("V2", DoubleType(), True),
+    StructField("V3", DoubleType(), True),
+    StructField("V4", DoubleType(), True),
+    StructField("V5", DoubleType(), True),
+    StructField("V6", DoubleType(), True),
+    StructField("V7", DoubleType(), True),
+    StructField("V8", DoubleType(), True),
+    StructField("V9", DoubleType(), True),
+    StructField("V10", DoubleType(), True),
+    StructField("V11", DoubleType(), True),
+    StructField("V12", DoubleType(), True),
+    StructField("V13", DoubleType(), True),
+    StructField("V14", DoubleType(), True),
+    StructField("V15", DoubleType(), True),
+    StructField("V16", DoubleType(), True),
+    StructField("V17", DoubleType(), True),
+    StructField("V18", DoubleType(), True),
+    StructField("V19", DoubleType(), True),
+    StructField("V20", DoubleType(), True),
+    StructField("V21", DoubleType(), True),
+    StructField("V22", DoubleType(), True),
+    StructField("V23", DoubleType(), True),
+    StructField("V24", DoubleType(), True),
+    StructField("V25", DoubleType(), True),
+    StructField("V26", DoubleType(), True),
+    StructField("V27", DoubleType(), True),
+    StructField("V28", DoubleType(), True),
+    StructField("Amount", DoubleType(), True),
+    StructField("Class", IntegerType(), True)
+])

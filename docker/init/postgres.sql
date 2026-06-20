@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS fraud_alerts (
+    id SERIAL PRIMARY KEY,
+    "Time" DOUBLE PRECISION,
+    "Amount" DOUBLE PRECISION,
+    "Class" INTEGER,
+    fraud_probability DOUBLE PRECISION,
+    detected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
