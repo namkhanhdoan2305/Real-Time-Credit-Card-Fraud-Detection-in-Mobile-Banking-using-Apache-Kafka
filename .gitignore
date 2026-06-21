@@ -1,10 +1,16 @@
-# Dữ liệu và Mô hình
+# 1. Dữ liệu và Mô hình (File nặng, không đẩy lên Git)
 dataset/
-models/*.pkl
+models/
 *.csv
+*.pkl
 
-# File hệ thống của Python
+# 2. Rác của hệ thống Big Data (Spark Streaming)
+checkpoints/
+
+# 3. File cấu hình bảo mật (Chứa mật khẩu Database)
+.env 
+
+# 4. Rác hệ thống của Python
 __pycache__/
 *.pyc
-
-.env
+.pytest_cache/

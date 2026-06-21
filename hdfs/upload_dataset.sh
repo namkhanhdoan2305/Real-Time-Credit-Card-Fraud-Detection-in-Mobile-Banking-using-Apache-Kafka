@@ -9,7 +9,6 @@ HDFS_PATH="/user/bigdata/fraud_detection/raw/"
 
 if [ ! -f "$LOCAL_FILE" ]; then
     echo "Lỗi: Không tìm thấy file $LOCAL_FILE"
-    echo "Hãy chắc chắn bạn đã tải file creditcard.csv (từ Kaggle) và đặt vào đúng thư mục dataset/raw/"
     exit 1
 fi
 
