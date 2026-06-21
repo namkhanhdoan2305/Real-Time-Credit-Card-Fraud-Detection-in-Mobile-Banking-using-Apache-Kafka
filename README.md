@@ -46,11 +46,11 @@ flowchart TD
 Dưới đây là danh sách các công nghệ cốt lõi và thư viện Python được khai báo trong `requirements.txt` nhằm phục vụ dự án:
 
 #### 🔹 Công nghệ hạ tầng sử dụng
-*   **Docker** <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker Logo" width="24" height="24" valign="middle"/>: Đóng gói và cô lập các dịch vụ (Kafka, ZooKeeper, PostgreSQL).
-*   **Apache ZooKeeper** <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Apache_ZooKeeper_logo.svg" alt="ZooKeeper Logo" width="24" height="24" valign="middle"/>: Quản lý cấu hình, điều phối và duy trì trạng thái của cụm Kafka.
-*   **Apache Kafka** <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Apache_Kafka_logo.svg" alt="Kafka Logo" width="30" height="20" valign="middle"/>: Hệ thống hàng đợi thông điệp phân tán thu thập dữ liệu giao dịch dưới dạng luồng thời gian thực.
-*   **Hadoop HDFS** <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Hadoop_logo.svg" alt="HDFS Logo" width="35" height="20" valign="middle"/>: Hệ thống tệp tin phân tán dùng để lưu trữ lâu dài và dự phòng các file dữ liệu lớn (`creditcard.csv`).
-*   **PySpark** <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="PySpark Logo" width="35" height="20" valign="middle"/>: Spark Structured Streaming xử lý luồng dữ liệu thời gian thực từ Kafka, thực hiện tiền xử lý và gọi mô hình ML để phân loại.
+*   **Docker** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker Logo" width="24" height="24" valign="middle"/>: Đóng gói và cô lập các dịch vụ (Kafka, ZooKeeper, PostgreSQL).
+*   **Apache ZooKeeper** <img src="https://www.apache.org/logos/res/zookeeper/default.png" alt="ZooKeeper Logo" width="24" height="24" valign="middle"/>: Quản lý cấu hình, điều phối và duy trì trạng thái của cụm Kafka.
+*   **Apache Kafka** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original.svg" alt="Kafka Logo" width="24" height="24" valign="middle"/>: Hệ thống hàng đợi thông điệp phân tán thu thập dữ liệu giao dịch dưới dạng luồng thời gian thực.
+*   **Hadoop HDFS** <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" alt="HDFS Logo" width="24" height="24" valign="middle"/>: Hệ thống tệp tin phân tán dùng để lưu trữ lâu dài và dự phòng các file dữ liệu lớn (`creditcard.csv`).
+*   **PySpark** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apachespark/apachespark-original.svg" alt="PySpark Logo" width="24" height="24" valign="middle"/>: Spark Structured Streaming xử lý luồng dữ liệu thời gian thực từ Kafka, thực hiện tiền xử lý và gọi mô hình ML để phân loại.
 *   **Streamlit** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/streamlit/streamlit-original.svg" alt="Streamlit Logo" width="24" height="24" valign="middle"/>: Framework xây dựng giao diện Dashboard thời gian thực nhanh chóng để hiển thị các chỉ số giao dịch, tỷ lệ gian lận và biểu đồ trực quan.
 
 #### 🔹 Thư viện cài đặt trong `requirements.txt`
@@ -70,7 +70,7 @@ Dưới đây là danh sách các công nghệ cốt lõi và thư viện Python
 
 Thực hiện lần lượt các bước sau để khởi chạy toàn bộ luồng dữ liệu thời gian thực:
 
-#### Bước 1: Khởi động Hạ tầng với Docker <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker Logo" width="20" height="20" valign="middle"/>
+#### Bước 1: Khởi động Hạ tầng với Docker <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker Logo" width="20" height="20" valign="middle"/>
 Di chuyển vào thư mục chứa cấu hình Docker Compose và khởi chạy các container ngầm (ZooKeeper, Kafka, PostgreSQL):
 ```bash
 cd docker
@@ -85,7 +85,7 @@ bash scripts/create_kafka_topics.sh
 ```
 *(Script sẽ tạo topic `financial_transactions` với 3 partitions. Bạn cũng có thể thiết lập biến môi trường `TRANSACTION_TOPIC` nếu sử dụng topic mặc định `banking.transactions.raw` trong code).*
 
-#### Bước 3: Thiết lập cấu trúc thư mục trên HDFS <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Hadoop_logo.svg" alt="HDFS Logo" width="30" height="18" valign="middle"/>
+#### Bước 3: Thiết lập cấu trúc thư mục trên HDFS <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" alt="HDFS Logo" width="20" height="20" valign="middle"/>
 Tạo cấu trúc thư mục lưu trữ phân tán và tải tập dữ liệu thô lên HDFS:
 ```bash
 # Tạo thư mục lưu trữ
@@ -95,7 +95,7 @@ bash hdfs/create_hdfs_dirs.sh
 bash hdfs/upload_dataset.sh
 ```
 
-#### Bước 4: Chạy PySpark Streaming Job <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="PySpark Logo" width="30" height="18" valign="middle"/>
+#### Bước 4: Chạy PySpark Streaming Job <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apachespark/apachespark-original.svg" alt="PySpark Logo" width="20" height="20" valign="middle"/>
 Bật chương trình Spark Structured Streaming để lắng nghe dữ liệu từ Kafka, thực hiện chuẩn hóa và chạy mô hình chấm điểm rủi ro:
 ```bash
 python src/streaming/fraud_detector.py
@@ -146,7 +146,7 @@ Vì các đặc trưng `Time` và `Amount` có khoảng giá trị rất khác b
 
 #### 🔹 Cấu hình Siêu tham số (Hyperparameters)
 Để ngăn ngừa tình trạng mô hình thiên lệch hoàn toàn về lớp giao dịch hợp lệ do mất cân bằng dữ liệu, tham số trọng số `scale_pos_weight` được tính toán tự động bằng tỷ lệ giữa lớp đa số và lớp thiểu số trong tập huấn luyện:
-$$\text{scale\_pos\_weight} = \frac{N_{\text{legitimate}}}{N_{\text{fraud}}} \approx 577.29$$
+$$\text{scale-pos-weight} = \frac{N_{\text{legitimate}}}{N_{\text{fraud}}} \approx 577.29$$
 
 Các tham số chi tiết của mô hình được thiết lập như sau:
 *   `n_estimators=200`: Số lượng cây quyết định (boosted trees).
