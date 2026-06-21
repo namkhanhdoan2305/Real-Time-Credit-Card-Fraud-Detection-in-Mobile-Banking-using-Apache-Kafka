@@ -179,3 +179,4 @@ Mô hình được huấn luyện trên **80% dữ liệu** và đánh giá khá
 #### 🔹 Chỉ số AUC-ROC
 *   **ROC-AUC Score: `0.9778`**
 *   *Nhận xét:* Điểm số AUC cực kỳ cao (gần tiệm cận 1.0) chứng minh mô hình XGBoost có khả năng phân biệt cực tốt giữa các giao dịch gian lận và các giao dịch thông thường. Ngay cả khi dữ liệu có sự chênh lệch lớn, mô hình vẫn duy trì tỷ lệ cảnh báo sai (False Alarm) ở mức cực kỳ thấp (chỉ 16 trường hợp trên tổng số 56,864 giao dịch hợp lệ).
+### 🔹 Demo: https://drive.google.com/file/d/1YN3JvAB4UnpZ8RzqozxdVR0S_1mEUkNL/view?usp=sharing
